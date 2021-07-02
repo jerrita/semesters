@@ -1,0 +1,1 @@
+cmd_/root/os_science/codes/4/task2/workqueue_test.ko := ld -r  -EL  -maarch64linux -T ./scripts/module-common.lds -T ./arch/arm64/kernel/module.lds  --build-id  -o /root/os_science/codes/4/task2/workqueue_test.ko /root/os_science/codes/4/task2/workqueue_test.o /root/os_science/codes/4/task2/workqueue_test.mod.o ;  true

@@ -1,0 +1,1 @@
+cmd_/root/os_science/codes/6/task2/register_newfs.ko := ld -r  -EL  -maarch64linux -T ./scripts/module-common.lds -T ./arch/arm64/kernel/module.lds  --build-id  -o /root/os_science/codes/6/task2/register_newfs.ko /root/os_science/codes/6/task2/register_newfs.o /root/os_science/codes/6/task2/register_newfs.mod.o ;  true
