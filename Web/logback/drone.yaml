@@ -1,0 +1,26 @@
+kind: pipeline
+name: backend-build
+type: kubernetes
+
+steps:
+  - name: Build
+    image: golang:latest
+    volumes:
+      - name: cache
+        path: /go/pkg
+    commands:
+      - go build .
+
+  - name: Upload
+    image: plugins/docker
+    settings:
+      repo: reg.jerrita.cn/backend/logback
+
+volumes:
+  # - name: pkgdeps
+  #   host:
+  #     path: /escape/drone-cache/pkg-deps
+  - name: cache
+    claim:
+      name: drone-cache-pvc
+

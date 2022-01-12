@@ -1,0 +1,24 @@
+{
+  "name": "logshow",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "element-plus": "^1.2.0-beta.3",
+    "js-md5": "^0.7.3",
+    "unplugin-vue-components": "^0.17.2",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.12",
+    "vue3-cookies": "^1.0.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.10.0",
+    "typescript": "^4.4.3",
+    "vite": "^2.6.14",
+    "vue-tsc": "^0.3.0"
+  }
+}

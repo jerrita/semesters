@@ -1,0 +1,23 @@
+kind: pipeline
+name: front-build
+type: kubernetes
+
+steps:
+  - name: build
+    image: node:lts-alpine
+    volumes:
+      - name: nodecache
+        path: node_modules
+    commands:
+      - npm install
+      - npm run build
+  
+  - name: Upload
+    image: plugins/docker
+    settings:
+      repo: reg.jerrita.cn/front/logshow
+
+volumes:
+  - name: nodecache
+    claim:
+      name: drone-cache-pvc
